@@ -2,11 +2,7 @@
 
 import sys, json
 
-def getfile(filename):
-    if "dkpg" in filename:
-        cutoff = 5  # dkpg
-    else:
-        cutoff = 0
+def getdkpgfile(filename):
 
     packs = []
     file = open(filename, "r")
@@ -33,6 +29,17 @@ def getfile(filename):
     return fdata, packs
 
 
+def getfile(filename):
+
+    packs = []
+    file = open(filename, "r")
+    fdata = [(line) for line in file]
+    fdata = [f.strip().split("\n") for f in fdata]
+    file.close()
+
+    return fdata
+
+
 def getpack(element):
         return element[0]
 
@@ -50,8 +57,8 @@ def findpack(pack, datalist):
 
 
 def diffdpkg():
-    f1data, f1packs = getfile(sys.argv[1])
-    f2data, f2packs = getfile(sys.argv[2])
+    f1data, f1packs = getdkpgfile(sys.argv[1])
+    f2data, f2packs = getdkpgfile(sys.argv[2])
 
     count1 = 0
     print("New packs:\n"+"="*160)
