@@ -90,8 +90,8 @@ def diffdpkg():
 
 
 def diffpip():
-    f1data = getfile(sys.argv[1])[0]
-    f2data = getfile(sys.argv[2])[0]
+    f1data = getfile(sys.argv[1])
+    f2data = getfile(sys.argv[2])
 
     count = 0
     for elem in f2data:
