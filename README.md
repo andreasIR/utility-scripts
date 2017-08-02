@@ -3,10 +3,9 @@
 
 Overview:
 
-The associated textfiles, "dpkgdiff.txt", "pip2freezediff.txt", and "pip3freezediff.txt", contains lists of packages installed from a fresh Ubuntu 16.04 installation.
+The associated textfiles, "dpkgdiff.txt", "pip2diff.txt", and "pip3diff.txt", contains lists of packages installed from a fresh Ubuntu 16.04 installation.
 The dpkgdiff.txt file consists of system packages and is separated into installed and updated packages accordingly.
-The pip2freezediff.txt and pip3freezediff.txt files are comprised of python modules that have been installed and updated for python2 and python3, respectively.
-
+Similarly, the pip2diff.txt and pip3diff.txt files are comprised of various python modules that have been installed and updated for python2 and python3, respectively.
 
 
 
